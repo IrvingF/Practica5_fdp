@@ -1,0 +1,13 @@
+INICIO
+   NÚMERO [0],[A],[B],[C]: ENTERO               ---->Con esto intento separar el número a operar para que sea más exacta la operación de cada unidad. Añadiendo un cero a la izquierda.
+   SELECCIONAR ([A],[B],[C]) EN                 ---->Aquí doy como opción a seleccionar [A],[B],[C], y según sea el caso, para la suma se hará la operación: 
+      CASO [C:=9]->                             
+           ESCRIBIR "[A], [B]+1, [C]:=0."       --->En caso de que [C]:=9, al sumar una unidad, la suma quedará como: "[A]" la unidad [A] queda igual; "[B]+1" a la unidad [B] se le suma 1; "[C]:=0" la unidad [C] toma el valor de 0.   
+      CASO [B:=9],[C:=9]->                               
+           ESCRIBIR "[A]+1, B:=0, [C]:=0."     --->En caso de que [B]:=9 y [C]:=9, entonces: "[A]+1" a la unidad [A] se le suma 1; "[B]:=0"  la unidad [B] toma el valor de 0; "[C]:=0" la unidad [C] toma el valor de 0.
+      CASO [A:=9],[B:=9],[C:=9]->               
+           ESCRIBIR "[0]+1, A:=0, B:=0, C:=0."  --->En caso de que [A]:=9, [B]:=9 y [C]:=9, entonces: "[0]+1 al [0] añadido al principio a la izquierda se le suma 1; "[A]:=0" la unidad [A] toma el valor de 0; "[B]:=0" la unidad [B] toma el valor valor de 0; "[C]:=0" la unidad [C] toma el valor de 0.
+      DEFECTO->                                 
+           ESCRIBIR "[A], [B], [C]+1."            ---> Por defecto, al hacer una suma en la que [A],[B] y [C] son diferentes de 9: "[A]" la unidad [A] queda igual; "[B]" la unidad [B] queda igual; "[C]+1" a la unidad [C] se le suma 1. 
+   FIN SELECCIONAR
+FIN 
